@@ -6,10 +6,12 @@
 
 body {
     min-height: 100%;
+    font-family: Roboto, serif;
 }
 
 .container {
     display: grid;
+    height: 100%;
     grid-template-columns: 1fr 60% 1fr;
     grid-template-rows: 1fr 2fr 2fr;
     gap: 4px;
@@ -29,9 +31,10 @@ div.logo {
     color: white;
 }
 
-.icons {
-    max-width: 2rem;
+img.icons {
+    max-width: 1.5rem;
 }
+
 
 .header {
     background-color: white;
@@ -78,10 +81,6 @@ div.logo {
     padding: 10px;
 }
 
-.search > label > img {
-    max-width: 2rem;
-}
-
 .menu ul, .menu li {
     font-size: 1.5rem;
 }
@@ -115,7 +114,7 @@ li {
     border: 2px dashed red;
     background: #60a35e;
     display: grid;
-    grid-template-rows: 10% 50% 30%;
+    grid-template-rows: 10% 50% 40%;
     grid-template-columns: 1fr;
     justify-content: left;
     padding: 1rem 2rem;
@@ -141,14 +140,26 @@ li {
 }
 
 .section-title {
-    font: 20px Ubuntu;
+    font-size: 1.5rem;
     padding: 0;
     margin: 0;
 }
 
+.projects .card {
+    border-left: 7px solid hsl(338, 38%, 42%);
+    display: grid;
+    grid-template-rows: 1fr auto 1fr 1fr;
+}
+
+.projects .card  div {
+    background-color: lightblue;
+    grid-row: -2 / -1;
+    width: fit-content;
+    justify-self: end;
+}
+
 .card {
     border-radius: 7px;
-    border-left: 7px solid hsl(338, 38%, 42%);
     background-color: white;
     padding: 2rem 1.25rem;
 }
@@ -173,4 +184,33 @@ input {
     border-radius: 50px;
     outline: none;
     border: 1px solid  #e5f0e3;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.announcements .card {
+    display: grid;
+    gap: 4px;
+    padding: 1rem;
+
+}
+
+.announce { 
+    padding: 1rem;
+}
+
+.announcements .card > *:not(:last-child) {
+    border-bottom: 2px solid #e5f0e3;
+}
+
+.card {
+    box-shadow: 0px 3px 5px #ccc;
 }
